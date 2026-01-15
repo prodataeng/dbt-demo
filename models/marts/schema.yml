@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+  - name: model_a
+    description: "A starter dbt model"
+    columns:
+      - name: complaint_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: model_d
+    description: "A starter dbt model"
+    columns:
+      - name: hero
+        description: "The primary key for this table"
+        data_tests:
+          - accepted_values:
+              values: ['Batman','Thanos', 'Shrek','Darth Vader','Baby Yoda']

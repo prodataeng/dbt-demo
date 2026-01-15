@@ -1,0 +1,18 @@
+
+selectors:
+  - name: finance_daily_pipeline
+    description: "Combined selection for finance daily run"
+    definition:
+      union: 
+        - method: fqn 
+          value: +model_i
+        - method: fqn 
+          value: marts.finance
+        - method: tag 
+          value: daily
+        - method: fqn 
+          value: "@model_a"
+
+
+  # dbt run --select +model_i marts.finance tag:daily @model_a
+  # dbt run --selector finance_daily_pipeline

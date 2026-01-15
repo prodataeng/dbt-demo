@@ -1,0 +1,10 @@
+sources:
+  - name: my_source
+    database: diesel-command-483009-r5
+    schema: raw
+    config:
+      enabled: true
+    tables:
+      - name: src_complaints
+      - name: src_costs
+      - name: src_planets
